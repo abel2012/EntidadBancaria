@@ -10,17 +10,17 @@ package com.fpmislata.banco.Datos;
  */
 public class EntidadBancaria {
     
-    private String idEntidadBancaria;
+    private int idEntidadBancaria;
     private String codigoEntidad;
     private String nombre;
     private String cif;
-    private tipoEntidadBancaria tipoEntidadBancaria;
+    private TipoEntidadBancaria tipoEntidadBancaria;
     
     public EntidadBancaria(){}
     
-    public EntidadBancaria(String idEntidad,String codigoEntidad,String nombre,String cif,tipoEntidadBancaria tipoEntidadBancaria){
+    public EntidadBancaria(int idEntidadBancaria,String codigoEntidad,String nombre,String cif,TipoEntidadBancaria tipoEntidadBancaria){
     
-        this.idEntidadBancaria=idEntidad;
+        this.idEntidadBancaria=idEntidadBancaria;
         this.codigoEntidad=codigoEntidad;
         this.nombre=nombre;
         this.cif=cif;
@@ -77,30 +77,35 @@ public class EntidadBancaria {
     /**
      * @return the tipoEntidadBancaria
      */
-    public tipoEntidadBancaria getTipoEntidadBancaria() {
+    public TipoEntidadBancaria getTipoEntidadBancaria() {
         return tipoEntidadBancaria;
     }
 
     /**
      * @param tipoEntidadBancaria the tipoEntidadBancaria to set
      */
-    public void setTipoEntidadBancaria(tipoEntidadBancaria tipoEntidadBancaria) {
+    public void setTipoEntidadBancaria(TipoEntidadBancaria tipoEntidadBancaria) {
         this.tipoEntidadBancaria = tipoEntidadBancaria;
     }
 
     /**
      * @return the idEntidadBancaria
      */
-    public String getIdEntidadBancaria() {
+    public int getIdEntidadBancaria() {
         return idEntidadBancaria;
     }
 
     /**
      * @param idEntidadBancaria the idEntidadBancaria to set
      */
-    public void setIdEntidadBancaria(String idEntidadBancaria) {
+    public void setIdEntidadBancaria(int idEntidadBancaria) {
         this.idEntidadBancaria = idEntidadBancaria;
     }
+
+    /**
+     * @return the idEntidadBancaria
+     */
+    
     
     
             

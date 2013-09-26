@@ -9,5 +9,6 @@ package com.fpmislata.banco.Datos;
  * @author alumno
  */
 public enum TipoMovimientoBancario {
-    
+    DEBE,
+    HABER
 }
