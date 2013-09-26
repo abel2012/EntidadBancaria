@@ -9,14 +9,14 @@ package com.fpmislata.banco.Datos;
  * @author alumno
  */
 public class SucursalBancaria {
-    private String idSucursalBancaria;
+    private int idSucursalBancaria;
     private EntidadBancaria entidadBancaria;
     private String codigoSucursal;
     private String nombre;
     
     public SucursalBancaria(){}
     
-    public SucursalBancaria(String idSucursalBancaria,EntidadBancaria entidadBancaria,String codigoSucursal,String nombre ){
+    public SucursalBancaria(int idSucursalBancaria,EntidadBancaria entidadBancaria,String codigoSucursal,String nombre ){
     this.idSucursalBancaria=idSucursalBancaria;
     this.entidadBancaria=entidadBancaria;
     this.codigoSucursal=codigoSucursal;
@@ -28,16 +28,7 @@ public class SucursalBancaria {
     /**
      * @return the idSucursalBancaria
      */
-    public String getIdSucursalBancaria() {
-        return idSucursalBancaria;
-    }
-
-    /**
-     * @param idSucursalBancaria the idSucursalBancaria to set
-     */
-    public void setIdSucursalBancaria(String idSucursalBancaria) {
-        this.idSucursalBancaria = idSucursalBancaria;
-    }
+   
 
     /**
      * @return the entidadBancaria
@@ -79,6 +70,20 @@ public class SucursalBancaria {
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    /**
+     * @return the idSucursalBancaria
+     */
+    public int getIdSucursalBancaria() {
+        return idSucursalBancaria;
+    }
+
+    /**
+     * @param idSucursalBancaria the idSucursalBancaria to set
+     */
+    public void setIdSucursalBancaria(int idSucursalBancaria) {
+        this.idSucursalBancaria = idSucursalBancaria;
     }
     
 }
