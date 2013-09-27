@@ -5,6 +5,8 @@
 package com.fpmislata.banco.Datos;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -18,6 +20,7 @@ public class CuentaBancaria {
     private String dc;
     private BigDecimal saldo;
     private String cif;
+     private List<MovimientoBancario> movimiento= new ArrayList<>();
     
     public CuentaBancaria(){}
     
@@ -123,6 +126,20 @@ public class CuentaBancaria {
      */
     public void setSaldo(BigDecimal saldo) {
         this.saldo = saldo;
+    }
+
+    /**
+     * @return the movimiento
+     */
+    public List<MovimientoBancario> getMovimiento() {
+        return movimiento;
+    }
+
+    /**
+     * @param movimiento the movimiento to set
+     */
+    public void setMovimiento(List<MovimientoBancario> movimiento) {
+        this.movimiento = movimiento;
     }
 
     /**

@@ -65,8 +65,11 @@ public class Main {
         
         
         MovimientoBancario movimientoBancario = new MovimientoBancario(1, TipoMovimientoBancario.DEBE, num3, gregorianCalendar, num4, "debe");
-        MovimientoBancario movimientoBancario = new MovimientoBancario(2, TipoMovimientoBancario.HABER, num5, gregorianCalendar2, num6, "debe");
+        MovimientoBancario movimientoBancario2 = new MovimientoBancario(2, TipoMovimientoBancario.HABER, num5, gregorianCalendar2, num6, "debe");
 
+ List<MovimientoBancario> movimiento = cuentaBancaria1.getMovimiento() ;
 
+        movimiento.add(movimientoBancario);
+        movimiento.add( movimientoBancario2);
     }
 }
