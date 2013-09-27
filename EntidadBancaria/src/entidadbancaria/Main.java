@@ -39,8 +39,8 @@ public class Main {
         CuentaBancaria cuentaBancaria1 = new CuentaBancaria(1,sucursalBancaria1,"ES7721266563156007653456","14",1200,"A464578K");
        CuentaBancaria cuentaBancaria2 = new CuentaBancaria(2,sucursalBancaria2,"ES7734676563156008753456","16",1500,"A567578S");
        
-       MovimientoBancario movimientoBancario = new MovimientoBancario(1,TipoMovimientoBancario.DEBE,123,"23/09/2013",1600,"debe");
-        MovimientoBancario movimientoBancario = new MovimientoBancario(2,TipoMovimientoBancario.HABER,350,"2107/2014",1600,"debe");
+       MovimientoBancario movimientoBancario = new MovimientoBancario(1,TipoMovimientoBancario.DEBE,123,"23-06-2013",1600,"debe");
+        MovimientoBancario movimientoBancario = new MovimientoBancario(2,TipoMovimientoBancario.HABER,350,"23-09-1993",1600,"debe");
        
     
     }

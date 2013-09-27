@@ -15,15 +15,15 @@ public class MovimientoBancario {
 
     private int idMovimientoBancario;
     private TipoMovimientoBancario tipoMovimientoBancario;
-    private int importe;
+    private BigDecimal importe;
     private Date fecha;
-    private int saldoTotal;
+    private BigDecimal saldoTotal;
     private String concepto;
 
     public MovimientoBancario() {
     }
 
-    public MovimientoBancario(int idMovimientoBancario, TipoMovimientoBancario tipoMovimientoBancario, int importe, Date fecha, int saldoTotal, String concepto) {
+    public MovimientoBancario(int idMovimientoBancario, TipoMovimientoBancario tipoMovimientoBancario, BigDecimal importe, Date fecha, BigDecimal saldoTotal, String concepto) {
 
         this.idMovimientoBancario = idMovimientoBancario;
         this.tipoMovimientoBancario = tipoMovimientoBancario;
@@ -106,31 +106,35 @@ public class MovimientoBancario {
     /**
      * @return the importe
      */
-    public int getImporte() {
+    public BigDecimal getImporte() {
         return importe;
     }
 
     /**
      * @param importe the importe to set
      */
-    public void setImporte(int importe) {
+    public void setImporte(BigDecimal importe) {
         this.importe = importe;
     }
 
     /**
      * @return the saldoTotal
      */
-    public int getSaldoTotal() {
+    public BigDecimal getSaldoTotal() {
         return saldoTotal;
     }
 
     /**
      * @param saldoTotal the saldoTotal to set
      */
-    public void setSaldoTotal(int saldoTotal) {
+    public void setSaldoTotal(BigDecimal saldoTotal) {
         this.saldoTotal = saldoTotal;
     }
 
+    /**
+     * @return the importe
+     */
+    
     /**
      * @return the importe
      */

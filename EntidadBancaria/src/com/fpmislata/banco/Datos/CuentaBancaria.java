@@ -16,12 +16,12 @@ public class CuentaBancaria {
     private SucursalBancaria sucursalBancaria;
     private String numeroCuenta;
     private String dc;
-    private int saldo;
+    private BigDecimal saldo;
     private String cif;
     
     public CuentaBancaria(){}
     
-    public CuentaBancaria(int idCuentaBancaria,SucursalBancaria sucursalBancaria,String numeroCuenta,String dc,int saldo,String cif ){
+    public CuentaBancaria(int idCuentaBancaria,SucursalBancaria sucursalBancaria,String numeroCuenta,String dc,BigDecimal saldo,String cif ){
     
     this.idCuentaBancaria=idCuentaBancaria;
     this.sucursalBancaria=sucursalBancaria;
@@ -114,16 +114,21 @@ public class CuentaBancaria {
     /**
      * @return the saldo
      */
-    public int getSaldo() {
+    public BigDecimal getSaldo() {
         return saldo;
     }
 
     /**
      * @param saldo the saldo to set
      */
-    public void setSaldo(int saldo) {
+    public void setSaldo(BigDecimal saldo) {
         this.saldo = saldo;
     }
+
+    /**
+     * @return the saldo
+     */
+    
 
     /**
      * @return the saldo
