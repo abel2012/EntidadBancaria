@@ -10,6 +10,7 @@ import com.fpmislata.banco.Datos.MovimientoBancario;
 import com.fpmislata.banco.Datos.SucursalBancaria;
 import com.fpmislata.banco.Datos.TipoEntidadBancaria;
 import com.fpmislata.banco.Datos.TipoMovimientoBancario;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,8 +37,15 @@ public class Main {
         sucursal.add(sucursalBancaria1);
         sucursal.add(sucursalBancaria2);
         
-        CuentaBancaria cuentaBancaria1 = new CuentaBancaria(1,sucursalBancaria1,"ES7721266563156007653456","14",1200,"A464578K");
-       CuentaBancaria cuentaBancaria2 = new CuentaBancaria(2,sucursalBancaria2,"ES7734676563156008753456","16",1500,"A567578S");
+        BigDecimal num = new BigDecimal("1200");
+num = num.add(new BigDecimal("3.2"));
+
+BigDecimal num2 = new BigDecimal("1600");
+num = num.add(new BigDecimal("5.3"));
+
+        CuentaBancaria cuentaBancaria1 = new CuentaBancaria(1,sucursalBancaria1,"ES7721266563156007653456","14",num,"A464578K");
+       CuentaBancaria cuentaBancaria2 = new CuentaBancaria(2,sucursalBancaria2,"ES7734676563156008753456","16",num2,"A567578S");
+       
        
        MovimientoBancario movimientoBancario = new MovimientoBancario(1,TipoMovimientoBancario.DEBE,123,"23-06-2013",1600,"debe");
         MovimientoBancario movimientoBancario = new MovimientoBancario(2,TipoMovimientoBancario.HABER,350,"23-09-1993",1600,"debe");
