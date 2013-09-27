@@ -4,6 +4,7 @@
  */
 package com.fpmislata.banco.Datos;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -11,41 +12,31 @@ import java.util.Date;
  * @author alumno
  */
 public class MovimientoBancario {
-    
-    private String idMovimientoBancario;
+
+    private int idMovimientoBancario;
     private TipoMovimientoBancario tipoMovimientoBancario;
-    private String importe;
+    private int importe;
     private Date fecha;
-    private String saldoTotal;
+    private int saldoTotal;
     private String concepto;
-    
-    public MovimientoBancario(){}
-    
-    public MovimientoBancario(String idMovimientoBancario,TipoMovimientoBancario tipoMovimientoBancario,String importe,Date fecha,String saldoTotal,String concepto){
-    
-     this.idMovimientoBancario=idMovimientoBancario;
-     this.tipoMovimientoBancario=tipoMovimientoBancario;
-     this.importe=importe;
-     this.fecha=fecha;
-     this.saldoTotal=saldoTotal;
-     this.concepto=concepto;
-    
+
+    public MovimientoBancario() {
+    }
+
+    public MovimientoBancario(int idMovimientoBancario, TipoMovimientoBancario tipoMovimientoBancario, int importe, Date fecha, int saldoTotal, String concepto) {
+
+        this.idMovimientoBancario = idMovimientoBancario;
+        this.tipoMovimientoBancario = tipoMovimientoBancario;
+        this.importe = importe;
+        this.fecha = fecha;
+        this.saldoTotal = saldoTotal;
+        this.concepto = concepto;
+
     }
 
     /**
      * @return the idMovimientoBancario
      */
-    public String getIdMovimientoBancario() {
-        return idMovimientoBancario;
-    }
-
-    /**
-     * @param idMovimientoBancario the idMovimientoBancario to set
-     */
-    public void setIdMovimientoBancario(String idMovimientoBancario) {
-        this.idMovimientoBancario = idMovimientoBancario;
-    }
-
     /**
      * @return the tipoMovimientoBancario
      */
@@ -63,16 +54,7 @@ public class MovimientoBancario {
     /**
      * @return the importe
      */
-    public String getImporte() {
-        return importe;
-    }
-
-    /**
-     * @param importe the importe to set
-     */
-    public void setImporte(String importe) {
-        this.importe = importe;
-    }
+    
 
     /**
      * @return the fecha
@@ -91,16 +73,7 @@ public class MovimientoBancario {
     /**
      * @return the saldoTotal
      */
-    public String getSaldoTotal() {
-        return saldoTotal;
-    }
-
-    /**
-     * @param saldoTotal the saldoTotal to set
-     */
-    public void setSaldoTotal(String saldoTotal) {
-        this.saldoTotal = saldoTotal;
-    }
+   
 
     /**
      * @return the concepto
@@ -115,4 +88,56 @@ public class MovimientoBancario {
     public void setConcepto(String concepto) {
         this.concepto = concepto;
     }
+
+    /**
+     * @return the idMovimientoBancario
+     */
+    public int getIdMovimientoBancario() {
+        return idMovimientoBancario;
+    }
+
+    /**
+     * @param idMovimientoBancario the idMovimientoBancario to set
+     */
+    public void setIdMovimientoBancario(int idMovimientoBancario) {
+        this.idMovimientoBancario = idMovimientoBancario;
+    }
+
+    /**
+     * @return the importe
+     */
+    public int getImporte() {
+        return importe;
+    }
+
+    /**
+     * @param importe the importe to set
+     */
+    public void setImporte(int importe) {
+        this.importe = importe;
+    }
+
+    /**
+     * @return the saldoTotal
+     */
+    public int getSaldoTotal() {
+        return saldoTotal;
+    }
+
+    /**
+     * @param saldoTotal the saldoTotal to set
+     */
+    public void setSaldoTotal(int saldoTotal) {
+        this.saldoTotal = saldoTotal;
+    }
+
+    /**
+     * @return the importe
+     */
+   
+
+    /**
+     * @return the saldoTotal
+     */
+   
 }

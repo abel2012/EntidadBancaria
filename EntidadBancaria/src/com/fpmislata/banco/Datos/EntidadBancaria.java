@@ -4,6 +4,9 @@
  */
 package com.fpmislata.banco.Datos;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author alumno
@@ -15,9 +18,10 @@ public class EntidadBancaria {
     private String nombre;
     private String cif;
     private TipoEntidadBancaria tipoEntidadBancaria;
+    private List<SucursalBancaria> sucursales= new ArrayList<>();
     
     public EntidadBancaria(){}
-    
+
     public EntidadBancaria(int idEntidadBancaria,String codigoEntidad,String nombre,String cif,TipoEntidadBancaria tipoEntidadBancaria){
     
         this.idEntidadBancaria=idEntidadBancaria;
@@ -26,7 +30,7 @@ public class EntidadBancaria {
         this.cif=cif;
         this.tipoEntidadBancaria=tipoEntidadBancaria;
     }
-
+    
     /**
      * @return the idEntidad
      */
@@ -100,6 +104,20 @@ public class EntidadBancaria {
      */
     public void setIdEntidadBancaria(int idEntidadBancaria) {
         this.idEntidadBancaria = idEntidadBancaria;
+    }
+
+    /**
+     * @return the sucursales
+     */
+    public List<SucursalBancaria> getSucursales() {
+        return sucursales;
+    }
+
+    /**
+     * @param sucursales the sucursales to set
+     */
+    public void setSucursales(List<SucursalBancaria> sucursales) {
+        this.sucursales = sucursales;
     }
 
     /**

@@ -4,22 +4,24 @@
  */
 package com.fpmislata.banco.Datos;
 
+import java.math.BigDecimal;
+
 /**
  *
  * @author alumno
  */
 public class CuentaBancaria {
     
-     private String idCuentaBancaria;
+     private int idCuentaBancaria;
     private SucursalBancaria sucursalBancaria;
     private String numeroCuenta;
     private String dc;
-    private String saldo;
+    private int saldo;
     private String cif;
     
     public CuentaBancaria(){}
     
-    public CuentaBancaria(String idCuentaBancaria,SucursalBancaria sucursalBancaria,String numeroCuenta,String dc,String saldo,String cif ){
+    public CuentaBancaria(int idCuentaBancaria,SucursalBancaria sucursalBancaria,String numeroCuenta,String dc,int saldo,String cif ){
     
     this.idCuentaBancaria=idCuentaBancaria;
     this.sucursalBancaria=sucursalBancaria;
@@ -33,16 +35,7 @@ public class CuentaBancaria {
     /**
      * @return the idCuentaBancaria
      */
-    public String getIdCuentaBancaria() {
-        return idCuentaBancaria;
-    }
-
-    /**
-     * @param idCuentaBancaria the idCuentaBancaria to set
-     */
-    public void setIdCuentaBancaria(String idCuentaBancaria) {
-        this.idCuentaBancaria = idCuentaBancaria;
-    }
+    
 
     /**
      * @return the sucursalBancaria
@@ -89,17 +82,7 @@ public class CuentaBancaria {
     /**
      * @return the saldo
      */
-    public String getSaldo() {
-        return saldo;
-    }
-
-    /**
-     * @param saldo the saldo to set
-     */
-    public void setSaldo(String saldo) {
-        this.saldo = saldo;
-    }
-
+    
     /**
      * @return the cif
      */
@@ -113,5 +96,38 @@ public class CuentaBancaria {
     public void setCif(String cif) {
         this.cif = cif;
     }
+
+    /**
+     * @return the idCuentaBancaria
+     */
+    public int getIdCuentaBancaria() {
+        return idCuentaBancaria;
+    }
+
+    /**
+     * @param idCuentaBancaria the idCuentaBancaria to set
+     */
+    public void setIdCuentaBancaria(int idCuentaBancaria) {
+        this.idCuentaBancaria = idCuentaBancaria;
+    }
+
+    /**
+     * @return the saldo
+     */
+    public int getSaldo() {
+        return saldo;
+    }
+
+    /**
+     * @param saldo the saldo to set
+     */
+    public void setSaldo(int saldo) {
+        this.saldo = saldo;
+    }
+
+    /**
+     * @return the saldo
+     */
+    
     
 }

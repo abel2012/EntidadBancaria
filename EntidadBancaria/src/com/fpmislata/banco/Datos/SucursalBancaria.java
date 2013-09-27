@@ -14,6 +14,7 @@ public class SucursalBancaria {
     private String codigoSucursal;
     private String nombre;
     
+    
     public SucursalBancaria(){}
     
     public SucursalBancaria(int idSucursalBancaria,EntidadBancaria entidadBancaria,String codigoSucursal,String nombre ){

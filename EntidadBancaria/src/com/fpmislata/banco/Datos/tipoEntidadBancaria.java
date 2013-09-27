@@ -6,11 +6,12 @@ package com.fpmislata.banco.Datos;
 
 /**
  *
- * @author alumno
+ * @author Abel
  */
-public enum tipoEntidadBancaria {
+public enum TipoEntidadBancaria {
+
     BANCO,
-    CAJADEAHORROS,
+    CAJADEAHORRO,
     COOPERATIVASDECREDITO,
     ESTABLECIMIENTOSFINANCIEROSDECREDITO
 }
