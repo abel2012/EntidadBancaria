@@ -41,14 +41,25 @@ public class Main {
 num = num.add(new BigDecimal("3.2"));
 
 BigDecimal num2 = new BigDecimal("1600");
-num = num.add(new BigDecimal("5.3"));
+num2 = num2.add(new BigDecimal("5.3"));
 
         CuentaBancaria cuentaBancaria1 = new CuentaBancaria(1,sucursalBancaria1,"ES7721266563156007653456","14",num,"A464578K");
        CuentaBancaria cuentaBancaria2 = new CuentaBancaria(2,sucursalBancaria2,"ES7734676563156008753456","16",num2,"A567578S");
        
-       
-       MovimientoBancario movimientoBancario = new MovimientoBancario(1,TipoMovimientoBancario.DEBE,123,"23-06-2013",1600,"debe");
-        MovimientoBancario movimientoBancario = new MovimientoBancario(2,TipoMovimientoBancario.HABER,350,"23-09-1993",1600,"debe");
+       BigDecimal num3 = new BigDecimal("100");
+num3 = num3.add(new BigDecimal("5.3"));
+
+BigDecimal num4 = new BigDecimal("1700");
+num4 = num4.add(new BigDecimal("8.3"));
+
+ BigDecimal num5 = new BigDecimal("150");
+num5 = num5.add(new BigDecimal("8.3"));
+
+BigDecimal num6 = new BigDecimal("1800");
+num6 = num6.add(new BigDecimal("8.3"));
+
+       MovimientoBancario movimientoBancario = new MovimientoBancario(1,TipoMovimientoBancario.DEBE,num3,"23-06-2013",num4,"debe");
+        MovimientoBancario movimientoBancario = new MovimientoBancario(2,TipoMovimientoBancario.HABER,num5,"23-09-1993",num6,"debe");
        
     
     }
