@@ -6,7 +6,7 @@ package com.fpmislata.banco.Datos;
 
 /**
  *
- * @author Abel
+ * @author alumno
  */
 public enum TipoEntidadBancaria {
 

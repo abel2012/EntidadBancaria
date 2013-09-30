@@ -60,16 +60,31 @@ public class Main {
         BigDecimal num6 = new BigDecimal("1800");
         num6 = num6.add(new BigDecimal("8.3"));
 
-         GregorianCalendar gregorianCalendar =new GregorianCalendar(1993,9,23);
-          GregorianCalendar gregorianCalendar2 =new GregorianCalendar(2013,5,17);
-        
-        
+        GregorianCalendar gregorianCalendar = new GregorianCalendar(1993, 9, 23);
+        GregorianCalendar gregorianCalendar2 = new GregorianCalendar(2013, 5, 17);
+
+
         MovimientoBancario movimientoBancario = new MovimientoBancario(1, TipoMovimientoBancario.DEBE, num3, gregorianCalendar, num4, "debe");
         MovimientoBancario movimientoBancario2 = new MovimientoBancario(2, TipoMovimientoBancario.HABER, num5, gregorianCalendar2, num6, "debe");
 
- List<MovimientoBancario> movimiento = cuentaBancaria1.getMovimiento() ;
+        List<MovimientoBancario> movimiento = cuentaBancaria1.getMovimiento();
 
         movimiento.add(movimientoBancario);
-        movimiento.add( movimientoBancario2);
+        movimiento.add(movimientoBancario2);
+
+        List<CuentaBancaria> cuenta = sucursalBancaria1.getCuenta();
+
+
+        for (CuentaBancaria mostrar2 : cuenta) {
+
+            System.out.println(mostrar2.getIdCuentaBancaria());
+            System.out.println(mostrar2.getSucursalBancaria());
+            System.out.println(mostrar2.getNumeroCuenta());
+            System.out.println(mostrar2.getDc());
+            System.out.println(mostrar2.getSaldo());
+            System.out.println(mostrar2.getCif());
+
+
+        }
     }
 }
