@@ -23,12 +23,16 @@ CREATE TABLE IF NOT EXISTS `entidadbancaria` (
   `codigoEntidad` varchar(50) DEFAULT NULL,
   `nombre` varchar(50) DEFAULT NULL,
   `cif` varchar(50) DEFAULT NULL,
-  `tipoEntidadBancaria` enum('Y','N') DEFAULT NULL
+  `tipoEntidadBancaria` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Volcando datos para la tabla banco.entidadbancaria: ~0 rows (aproximadamente)
 DELETE FROM `entidadbancaria`;
 /*!40000 ALTER TABLE `entidadbancaria` DISABLE KEYS */;
+INSERT INTO `entidadbancaria` (`idEntidad`, `codigoEntidad`, `nombre`, `cif`, `tipoEntidadBancaria`) VALUES
+	(1, '123678245', 'abel', '1235678', 'BANCO'),
+	(2, '12367893', 'aaron', '12347812', 'CAJADEAHORRO'),
+	(1, '134567890', 'bankia', '34512398', 'BANCO');
 /*!40000 ALTER TABLE `entidadbancaria` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
