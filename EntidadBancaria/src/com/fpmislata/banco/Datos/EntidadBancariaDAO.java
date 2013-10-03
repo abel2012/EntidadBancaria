@@ -72,15 +72,35 @@ public class EntidadBancariaDAO {
                 + "(idEntidad, codigoEntidad, nombre, cif,tipoEntidadBancaria) VALUES"
                 + "(?,?,?,?,?)";
         PreparedStatement preparedStatement2 = connection.prepareStatement(insertTableSQL);
-        preparedStatement2.setInt(4, 4);
-        preparedStatement2.setString(5, "13672470");
-        preparedStatement2.setString(6, "Ruralcaja");
-        preparedStatement2.setString(7, "14562345");
+        preparedStatement2.setInt(7, 7);
+        preparedStatement2.setString(5, "89234568");
+        preparedStatement2.setString(6, "Brasof Asimov");
+        preparedStatement2.setString(7, "57835623");
         preparedStatement2.setString(8, "Banco");
 // execute insert SQL stetement
         preparedStatement2.executeUpdate();
 
     }
+    
+    public void update( EntidadBancaria entidadBancaria) throws SQLException{
+    String updateTableSQL = "UPDATE entidadbancaria SET nombre= ? WHERE idEntidad= ?";
+PreparedStatement preparedStatement3 = connection.prepareStatement(updateTableSQL);
+preparedStatement3.setString(1, "bankiamafia");
+preparedStatement3.setInt(1, 1);
+// execute insert SQL stetement
+preparedStatement3.executeUpdate();
+    }
+    
+   public  Void delete(int idEntidadBancaria) throws SQLException{
+   
+   String deleteSQL = "DELETE entidadbancaria WHERE idEntidad = ?";
+PreparedStatement preparedStatement4 = connection.prepareStatement(deleteSQL);
+preparedStatement4.setInt(2, 2);
+// execute delete SQL stetement
+preparedStatement4.executeUpdate();
+     return null;
+
+   }
 
     connection.close();
 }
