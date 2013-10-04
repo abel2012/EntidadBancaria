@@ -9,6 +9,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  *
@@ -16,7 +19,19 @@ import java.sql.SQLException;
  */
 public class EntidadBancariaDAO {
  Connection connection = null;
+ private ArrayList<EntidadBancaria> entidades; 
+ EntidadBancaria entidadBancaria = new EntidadBancaria(); 
+
+ /*List<EntidadBancaria> findByCodigo(String "45629866")
+ {return null;};*/
+
+ 
+ 
+  
+ 
+         
     public EntidadBancariaDAO() throws ClassNotFoundException, SQLException {
+        this.entidades = new ArrayList<>();
         Class.forName("com.mysql.jdbc.Driver");
        
         connection = DriverManager.getConnection(
@@ -28,13 +43,12 @@ public class EntidadBancariaDAO {
 
         int idEntidadBancaria = 1;
         String selectSQL = "SELECT * FROM entidadbancaria WHERE idEntidad = ?";
+        
         PreparedStatement preparedStatement = connection.prepareStatement(selectSQL);
         preparedStatement.setInt(1, idEntidadBancaria);
         ResultSet rs = preparedStatement.executeQuery();
         while (rs.next()) {
-            String userid = rs.getString("USER_ID");
-            String username = rs.getString("USERNAME");
-
+           
             idEntidad = rs.getInt("idEntidad");
             String codigoEntidad = rs.getString("codigoEntidad");
             String nombre = rs.getString("nombre");
@@ -91,16 +105,61 @@ preparedStatement3.setInt(1, 1);
 preparedStatement3.executeUpdate();
     }
     
-   public  Void delete(int idEntidadBancaria) throws SQLException{
-   
+   public  Connection delete(int idEntidadBancaria) throws SQLException{
+       PreparedStatement preparedStatement = null;
+   try{
    String deleteSQL = "DELETE entidadbancaria WHERE idEntidad = ?";
 PreparedStatement preparedStatement4 = connection.prepareStatement(deleteSQL);
 preparedStatement4.setInt(2, 2);
 // execute delete SQL stetement
 preparedStatement4.executeUpdate();
      return null;
-
    }
+   
+  catch (SQLException e) {
+ 
+			System.out.println(e.getMessage());
+ 
+		} finally {
+ 
+			if (preparedStatement != null) {
+				preparedStatement.close();
+			}
+ 
+			if (connection != null) {
+				connection.close();
+			}
+ 
+		}
+return connection;
+   }
+   public List<EntidadBancaria> findAll() throws SQLException{
+    
+        
+        String selectSQL = "SELECT * FROM entidadbancaria";
+        
+        PreparedStatement preparedStatement = connection.prepareStatement(selectSQL);
+       
+        ResultSet rs = preparedStatement.executeQuery();
+        while (rs.next()) {
+           
+            int idEntidad = rs.getInt("idEntidad");
+            String codigoEntidad = rs.getString("codigoEntidad");
+            String nombre = rs.getString("nombre");
+            String cif = rs.getString("cif");
+            String tipoEntidadBancaria = rs.getString("tipoEntidadBancaria");
 
-    connection.close();
+            System.out.println(idEntidad);
+            System.out.println(codigoEntidad);
+            System.out.println(nombre);
+            System.out.println(cif);
+            System.out.println(tipoEntidadBancaria);
+
+        }
+     return null;
+    
+   }
+    
+
+   
 }
