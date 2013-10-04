@@ -156,10 +156,42 @@ return connection;
             System.out.println(tipoEntidadBancaria);
 
         }
+        
+        
      return null;
     
    }
     
+   List<EntidadBancaria> findByCodigo(String codigo) throws SQLException {
+     
+    
+      
+        String selectSQL = "SELECT * FROM entidadbancaria WHERE codigo==codigoEntidad";
+        
+        PreparedStatement preparedStatement = connection.prepareStatement(selectSQL);
+       
+        ResultSet rs = preparedStatement.executeQuery();
+        while (rs.next()) {
+           
+            int idEntidad = rs.getInt("idEntidad");
+            String codigoEntidad = rs.getString("codigoEntidad");
+            String nombre = rs.getString("nombre");
+            String cif = rs.getString("cif");
+            String tipoEntidadBancaria = rs.getString("tipoEntidadBancaria");
+
+            System.out.println(idEntidad);
+            System.out.println(codigoEntidad);
+            System.out.println(nombre);
+            System.out.println(cif);
+            System.out.println(tipoEntidadBancaria);
+
+        }   
+       
+       
+       
+       return null;
+   
+   }
 
    
 }
