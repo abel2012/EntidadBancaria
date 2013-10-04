@@ -2,15 +2,15 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package entidadbancaria;
+package com.fpmislata.banco.Presentacion;
 
-import com.fpmislata.banco.Datos.CuentaBancaria;
-import com.fpmislata.banco.Datos.EntidadBancaria;
+import com.fpmislata.banco.Negocio.CuentaBancaria;
+import com.fpmislata.banco.Negocio.EntidadBancaria;
 import com.fpmislata.banco.Datos.EntidadBancariaDAO;
-import com.fpmislata.banco.Datos.MovimientoBancario;
-import com.fpmislata.banco.Datos.SucursalBancaria;
-import com.fpmislata.banco.Datos.TipoEntidadBancaria;
-import com.fpmislata.banco.Datos.TipoMovimientoBancario;
+import com.fpmislata.banco.Negocio.MovimientoBancario;
+import com.fpmislata.banco.Negocio.SucursalBancaria;
+import com.fpmislata.banco.Negocio.TipoEntidadBancaria;
+import com.fpmislata.banco.Negocio.TipoMovimientoBancario;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Calendar;

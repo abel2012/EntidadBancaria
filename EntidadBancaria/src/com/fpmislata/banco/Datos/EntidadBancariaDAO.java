@@ -4,6 +4,7 @@
  */
 package com.fpmislata.banco.Datos;
 
+import com.fpmislata.banco.Negocio.EntidadBancaria;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -90,7 +91,7 @@ public class EntidadBancariaDAO {
         preparedStatement2.setString(5, entidadBancaria.getCodigoEntidad());
         preparedStatement2.setString(6, entidadBancaria.getNombre());
         preparedStatement2.setString(7, entidadBancaria.getCif());
-        preparedStatement2.setString(8, entidadBancaria.getTipoEntidadBancaria().toString());
+        preparedStatement2.setString(8, entidadBancaria.getTipoEntidadBancaria().name());
 // execute insert SQL stetement
         preparedStatement2.executeUpdate();
 
@@ -99,7 +100,7 @@ public class EntidadBancariaDAO {
     public void update( EntidadBancaria entidadBancaria) throws SQLException{
     String updateTableSQL = "UPDATE entidadbancaria SET nombre= ? WHERE idEntidad= ?";
 PreparedStatement preparedStatement3 = connection.prepareStatement(updateTableSQL);
-preparedStatement3.setString(1, "bankiamafia");
+preparedStatement3.setString(1, entidadBancaria.getNombre());
 preparedStatement3.setInt(1, 1);
 // execute insert SQL stetement
 preparedStatement3.executeUpdate();

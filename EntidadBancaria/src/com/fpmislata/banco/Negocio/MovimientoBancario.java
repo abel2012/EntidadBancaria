@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.fpmislata.banco.Datos;
+package com.fpmislata.banco.Negocio;
 
 import java.math.BigDecimal;
 import java.util.Date;
