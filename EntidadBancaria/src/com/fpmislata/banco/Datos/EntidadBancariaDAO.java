@@ -86,11 +86,11 @@ public class EntidadBancariaDAO {
                 + "(idEntidad, codigoEntidad, nombre, cif,tipoEntidadBancaria) VALUES"
                 + "(?,?,?,?,?)";
         PreparedStatement preparedStatement2 = connection.prepareStatement(insertTableSQL);
-        preparedStatement2.setInt(7, 7);
-        preparedStatement2.setString(5, "89234568");
-        preparedStatement2.setString(6, "Brasof Asimov");
-        preparedStatement2.setString(7, "57835623");
-        preparedStatement2.setString(8, "Banco");
+        preparedStatement2.setInt(4, entidadBancaria.getIdEntidadBancaria());
+        preparedStatement2.setString(5, entidadBancaria.getCodigoEntidad());
+        preparedStatement2.setString(6, entidadBancaria.getNombre());
+        preparedStatement2.setString(7, entidadBancaria.getCif());
+        preparedStatement2.setString(8, entidadBancaria.getTipoEntidadBancaria().toString());
 // execute insert SQL stetement
         preparedStatement2.executeUpdate();
 
