@@ -6,6 +6,7 @@ package entidadbancaria;
 
 import com.fpmislata.banco.Datos.CuentaBancaria;
 import com.fpmislata.banco.Datos.EntidadBancaria;
+import com.fpmislata.banco.Datos.EntidadBancariaDAO;
 import com.fpmislata.banco.Datos.MovimientoBancario;
 import com.fpmislata.banco.Datos.SucursalBancaria;
 import com.fpmislata.banco.Datos.TipoEntidadBancaria;
@@ -30,7 +31,8 @@ public class Main {
 
         EntidadBancaria entidadBancaria1 = new EntidadBancaria(1, "12346789", "Asaco", "A464578K", TipoEntidadBancaria.BANCO);
         EntidadBancaria entidadBancaria2 = new EntidadBancaria(2, "34562134", "Alibaba y los 40", "A567578S", TipoEntidadBancaria.CAJADEAHORRO);
-
+         EntidadBancaria entidadBancaria3 = new EntidadBancaria(7,"25672564","Allyson","S2345623",TipoEntidadBancaria.BANCO); 
+         
         SucursalBancaria sucursalBancaria1 = new SucursalBancaria(1, entidadBancaria1, "12345678", "bankia");
         SucursalBancaria sucursalBancaria2 = new SucursalBancaria(2, entidadBancaria2, "13456723", "bancaja");
 

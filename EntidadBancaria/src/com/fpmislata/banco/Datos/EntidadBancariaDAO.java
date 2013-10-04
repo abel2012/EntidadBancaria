@@ -20,7 +20,7 @@ import java.util.List;
 public class EntidadBancariaDAO {
  Connection connection = null;
  private ArrayList<EntidadBancaria> entidades; 
- EntidadBancaria entidadBancaria = new EntidadBancaria(); 
+    EntidadBancaria entidadBancaria = new EntidadBancaria();
 
  /*List<EntidadBancaria> findByCodigo(String "45629866")
  {return null;};*/
